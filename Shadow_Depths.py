@@ -327,7 +327,7 @@ inventory = ["map", "sword", "torch", "compass",]
 swords = []
 answer = ""
 player_health=10
-monster_health=1
+monster_health=15
 
 def add_to_inventory(item):
      inventory.append(item)
@@ -398,9 +398,9 @@ os.system("cls")
 time.sleep (2)
 
 def titles():
-    pygame.mixer.init()
-    pygame.mixer.music.load("./audio/Theme.mp3")
-    pygame.mixer.music.play()
+    # pygame.mixer.init()
+    # pygame.mixer.music.load("./audio/Theme.mp3")
+    # pygame.mixer.music.play()
     print (title_art)
     time.sleep(8.5)
     os.system("cls")
@@ -614,7 +614,7 @@ def dining_room():
 def rolling(room):
         global monster_health, player_health
         player_health=10
-        monster_health=1
+        monster_health=15
         while True:
             Player_roll=input("**ROLL** to hit  ").lower()
             if Player_roll=="roll":
@@ -1049,6 +1049,7 @@ def vault_room():
                 if answer == "candle":
                     os.system("cls")
                     good_ending()
+                    return
                 else:
                     os.system("cls")
                     bad_ending()
@@ -1140,17 +1141,17 @@ def bad_ending():
 def game_over():
     os.system("cls")
     print (lose)
-    pygame.mixer.init()
-    pygame.mixer.music.load("./audio/Death.mp3")
-    pygame.mixer.music.play()
+    # pygame.mixer.init()
+    # pygame.mixer.music.load("./audio/Death.mp3")
+    # pygame.mixer.music.play()
     time.sleep(4)
 
 def you_win():
     os.system("cls")
     print (win)
-    pygame.mixer.init()
-    pygame.mixer.music.load("./audio/Victory.mp3")
-    pygame.mixer.music.play()
+    # pygame.mixer.init()
+    # pygame.mixer.music.load("./audio/Victory.mp3")
+    # pygame.mixer.music.play()
     time.sleep(4)
 
-titles()
+vault_room()

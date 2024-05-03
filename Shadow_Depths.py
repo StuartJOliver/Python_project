@@ -1,7 +1,7 @@
 import time
 import random
 import os
-import pygame.mixer
+#import pygame.mixer
 import colorama
 from colorama import Fore, Back, Style
 

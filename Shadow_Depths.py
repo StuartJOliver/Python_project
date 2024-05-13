@@ -1154,4 +1154,4 @@ def you_win():
     # pygame.mixer.music.play()
     time.sleep(4)
 
-vault_room()
+titles()
